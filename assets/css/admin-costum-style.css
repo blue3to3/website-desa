@@ -1,0 +1,251 @@
+/* custom-style.css */
+
+/* 1. Reset & Base */
+body {
+    background: linear-gradient(135deg, #1a1c2c 0%, #4a192c 100%) fixed !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    color: #fff;
+}
+.content-wrapper { background: transparent !important; }
+
+/* 2. Navbar & Logo Glassmorphism */
+.main-header .navbar, .main-header .logo { 
+    background: rgba(255, 255, 255, 0.03) !important; 
+    backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* 3. Sidebar Glassmorphism */
+.main-sidebar {
+    background: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+.sidebar-menu li a { color: #d1d1d1 !important; transition: 0.3s; border-left: 3px solid transparent; }
+.sidebar-menu li.active a, .sidebar-menu li a:hover {
+    background: rgba(255, 193, 7, 0.1) !important;
+    color: #ffc107 !important; border-left: 3px solid #ffc107 !important;
+}
+
+/* 4. Dashboard Small Box (Terang & Elegan) */
+.small-box {
+    background: rgba(255, 255, 255, 0.15) !important; 
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+.small-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.25) !important;
+    border-color: #fff;
+}
+.box-penduduk { border-left: 5px solid #00d2ff !important; }
+.box-permintaan { border-left: 5px solid #00ff88 !important; }
+.box-selesai { border-left: 5px solid #ffc107 !important; }
+
+.small-box .inner h3 { 
+    font-weight: 800; font-size: 32pt; margin-bottom: 0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.small-box .inner p {
+    font-size: 11pt; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 1px; color: rgba(255,255,255,0.9);
+}
+.small-box .icon { 
+    top: 10px; right: 15px; font-size: 60px !important;
+    color: rgba(255, 255, 255, 0.2) !important; 
+}
+.small-box:hover .icon { color: rgba(255, 193, 7, 0.4) !important; transform: scale(1.1); }
+.small-box-footer { 
+    background: rgba(0, 0, 0, 0.2) !important; 
+    color: #ffc107 !important; padding: 8px 0 !important;
+    text-transform: uppercase; letter-spacing: 1px; font-size: 8pt;
+}
+
+/* 5. Tabel & Container (Data Penduduk) */
+.table-container {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(10px);
+    border-radius: 15px; padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+.table { color: #fff !important; background: transparent !important; }
+.table thead th {
+    background: rgba(255, 193, 7, 0.2) !important;
+    color: #ffc107 !important; border-bottom: 2px solid #ffc107 !important;
+    text-transform: uppercase; font-size: 9pt; letter-spacing: 1px;
+    text-align: center; vertical-align: middle;
+}
+.table tbody td {
+    vertical-align: middle !important;
+    border-color: rgba(255, 255, 255, 0.05) !important;
+    font-size: 9.5pt;
+}
+.table-striped>tbody>tr:nth-of-type(odd) { background-color: rgba(255, 255, 255, 0.03) !important; }
+.table-hover tbody tr:hover {
+    background-color: rgba(255, 193, 7, 0.05) !important;
+    transition: 0.3s;
+}
+
+/* 6. Komponen Lainnya */
+.text-success { color: #00ff88 !important; text-shadow: 0 0 10px #00ff88; }
+.btn-success-glass { background: #00ff8822; border: 1px solid #00ff88; color: #00ff88; border-radius: 8px; }
+.btn-success-glass:hover { background: #00ff88; color: #000; }
+.dataTables_filter input {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important; border-radius: 20px; padding: 5px 15px;
+}
+
+/* ===== Clean Government Style ===== */
+
+:root{
+  --gov-primary:#1f6f43;   /* hijau resmi */
+  --gov-accent:#f4b400;    /* emas aksen */
+  --gov-bg:#f4f6f9;        /* abu lembut */
+}
+
+body{
+  background: var(--gov-bg);
+}
+
+.gov-hero{
+  background: var(--gov-primary);
+  color:#fff;
+  padding:60px 0 40px;
+}
+
+.gov-hero h1{
+  font-weight:700;
+  letter-spacing:1px;
+}
+
+.gov-divider{
+  width:90px;
+  height:4px;
+  background:var(--gov-accent);
+  margin:15px auto 0;
+}
+
+.gov-section{
+  padding:60px 0;
+}
+
+.gov-card{
+  background:#fff;
+  border:none;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.gov-title{
+  color:var(--gov-primary);
+  font-weight:600;
+  margin-bottom:20px;
+}
+
+.timeline-horizontal {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 40px;
+}
+
+.timeline-horizontal::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.timeline-step {
+    position: relative;
+    text-align: center;
+    width: 14%;
+    z-index: 2;
+}
+
+.timeline-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.timeline-step h6 {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.timeline-step p {
+    font-size: 13px;
+    color: #555;
+}
+
+.timeline-horizontal {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+
+.timeline-step {
+    min-width: 180px;
+    padding: 0 10px;
+}
+
+@media (max-width: 992px) {
+    .timeline-horizontal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-horizontal::before {
+        display: none;
+    }
+
+    .timeline-step {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.surat-card {
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.surat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #e9f7ef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 26px;
+    color: #198754;
+}
