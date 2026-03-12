@@ -25,7 +25,7 @@
 </div>
 
 <?php
-$base = "/DESA_NUSAJATI/desa_nusajati/";
+$base = "/DESA_NUSAJATI/";
 ?>
 
 <!-- NAVBAR -->

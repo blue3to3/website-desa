@@ -199,6 +199,14 @@ while ($row = mysqli_fetch_array($qCek)) {
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label class="col-sm-4 control-label">Alamat</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="falamat" class="form-control"
+                                                    style="text-transform: capitalize;" placeholder="Alamat"
+                                                    value="<?php echo $row['alamat']; ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label class="col-sm-4 control-label">Desa</label>
                                             <div class="col-sm-8">
                                                 <input type="text" name="fdesa" class="form-control"
@@ -344,6 +352,22 @@ while ($row = mysqli_fetch_array($qCek)) {
                                       echo 'selected';
                                     } ?> value="Cerai Mati">Cerai Mati</option>
                                                 </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">Nama Ayah</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="fnama_ayah" class="form-control"
+                                                    style="text-transform: capitalize;" placeholder="Nama Ayah"
+                                                    value="<?php echo $row['nama_ayah']; ?>" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label">Nama Ibu</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" name="fnama_ibu" class="form-control"
+                                                    style="text-transform: capitalize;" placeholder="Nama Ibu"
+                                                    value="<?php echo $row['nama_ibu']; ?>" required>
                                             </div>
                                         </div>
                                         <div class="form-group">

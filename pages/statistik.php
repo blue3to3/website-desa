@@ -8,7 +8,7 @@ $totalKK = mysqli_fetch_assoc(
 )['total'];
 
 /* ================= JK ================= */
-$jk=['Laki-laki'=>0,'Perempuan'=>0];
+$jk=['LAKI-LAKI'=>0,'PEREMPUAN'=>0];
 $q=mysqli_query($connect,"SELECT jenis_kelamin,COUNT(*) t FROM penduduk GROUP BY jenis_kelamin");
 while($r=mysqli_fetch_assoc($q))$jk[$r['jenis_kelamin']]=$r['t'];
 
@@ -81,13 +81,13 @@ body{font-family:system-ui;background:#f5f6fa}
 
 <div class="kpi-card">
 <h5 style="font-size:20px; font-weight:bold; color:#198754;">Laki-laki</h5>
-<div class="kpi-big"><?= $jk['Laki-laki'] ?></div>
+<div class="kpi-big"><?= $jk['LAKI-LAKI'] ?></div>
 <span>Jiwa</span>
 </div>
 
 <div class="kpi-card">
 <h5 style="font-size:20px; font-weight:bold; color:#198754;">Perempuan</h5>
-<div class="kpi-big"><?= $jk['Perempuan'] ?></div>
+<div class="kpi-big"><?= $jk['PEREMPUAN'] ?></div>
 <span>Jiwa</span>
 </div>
 
@@ -112,7 +112,7 @@ const warna=['#0d6efd','#f06292','#4caf50','#ff9800','#9c27b0','#00bcd4','#ffc10
 /* JK */
 new Chart(jk,{type:'doughnut',
 data:{labels:['Laki-laki','Perempuan'],
-datasets:[{data:[<?= $jk['Laki-laki']?>,<?= $jk['Perempuan']?>],backgroundColor:warna}]},
+datasets:[{data:[<?= $jk['LAKI-LAKI']?>,<?= $jk['PEREMPUAN']?>],backgroundColor:warna}]},
 options:{plugins:{title:{display:true,text:'Jenis Kelamin'}}}});
 
 /* AGAMA */

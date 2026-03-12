@@ -126,12 +126,9 @@ $rowss = $pejabatDesa; // biar tidak ubah isi surat
             </div>
 
             <div style="font-size:13px;">
-                <?= $rows['alamat']; ?> Telp. <?= $rows['telepon']; ?>
+                JL PROTOKOL RT 002 RW 05 NO 41
             </div>
 
-            <div style="font-size:13px;">
-                Email: <?= $rows['email']; ?> Kode Pos <?= $rows['kode_pos']; ?>
-            </div>
         </div>
         <div align="center"><u>
                 <h4 class="kop">SURAT PENGANTAR IJIN KERAMAIAN</h4>

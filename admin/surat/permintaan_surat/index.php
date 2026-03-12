@@ -146,8 +146,6 @@ include('../part/header.php');
                                             $folder = "surat_pengantar_umum";
                                         } else if ($row['jenis_surat'] == "Surat Keterangan Domisili Tempat Tinggal") {
                                             $folder = "surat_keterangan_domisili_tempat_tinggal";
-                                        } else if ($row['jenis_surat'] == "Surat Keterangan Domisili Usaha") {
-                                            $folder = "surat_keterangan_domisili_usaha";
                                         } else if ($row['jenis_surat'] == "Surat Keterangan Tidak Mampu") {
                                             $folder = "surat_keterangan_tidak_mampu";
                                         } else if ($row['jenis_surat'] == "Surat Keterangan Usaha") {

@@ -143,8 +143,6 @@ include('../part/header.php');
                                         $folder = "surat_pengantar_umum";
                                     } else if ($js == "Surat Keterangan Domisili Tempat Tinggal") {
                                         $folder = "surat_keterangan_domisili_tempat_tinggal";
-                                    } else if ($js == "Surat Keterangan Domisili Usaha") {
-                                        $folder = "surat_keterangan_domisili_usaha";
                                     } else if ($js == "Surat Keterangan Tidak Mampu") {
                                         $folder = "surat_keterangan_tidak_mampu";
                                     } else if ($js == "Surat Keterangan Usaha") {

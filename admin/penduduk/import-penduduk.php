@@ -13,6 +13,13 @@ $sheet=$spreadsheet->getActiveSheet()->toArray();
 
 $berhasil=0;
 
+$qProfil=mysqli_query($connect,"SELECT nama_desa,kecamatan,kabupaten FROM profil_desa WHERE id=1");
+$profil=mysqli_fetch_assoc($qProfil);
+
+$desa=$profil['nama_desa'];
+$kecamatan=$profil['kecamatan'];
+$kota=$profil['kabupaten'];
+
 // skip header
 for($i=1;$i<count($sheet);$i++){
 
@@ -36,13 +43,13 @@ $jenis_kelamin=mysqli_real_escape_string($connect,trim($data[6]));
 $agama=mysqli_real_escape_string($connect,trim($data[7]));
 $pend=mysqli_real_escape_string($connect,trim($data[8]));
 $pekerjaan=mysqli_real_escape_string($connect,trim($data[9]));
-$rt=mysqli_real_escape_string($connect,trim($data[10]));
-$rw=mysqli_real_escape_string($connect,trim($data[11]));
-$desa=mysqli_real_escape_string($connect,trim($data[12]));
-$kecamatan=mysqli_real_escape_string($connect,trim($data[13]));
-$kota=mysqli_real_escape_string($connect,trim($data[14]));
-$status=mysqli_real_escape_string($connect,trim($data[15]));
-$wn=mysqli_real_escape_string($connect,trim($data[16]));
+$alamat=mysqli_real_escape_string($connect,trim($data[10]));
+$rt=mysqli_real_escape_string($connect,trim($data[11]));
+$rw=mysqli_real_escape_string($connect,trim($data[12]));
+$status=mysqli_real_escape_string($connect,trim($data[13]));
+$wn=mysqli_real_escape_string($connect,trim($data[14]));
+$nama_ayah=mysqli_real_escape_string($connect,trim($data[15]));
+$nama_ibu=mysqli_real_escape_string($connect,trim($data[16]));
 
 if($nik!=''){
 
@@ -50,12 +57,14 @@ mysqli_query($connect,"
 INSERT INTO penduduk(
 nik,nama,no_kk,tempat_lahir,tgl_lahir,
 jenis_kelamin,agama,pend_terakhir,pekerjaan,
+alamat,nama_ayah,nama_ibu,
 rt,rw,desa,kecamatan,kota,
 status_perkawinan,kewarganegaraan
 )
 VALUES(
 '$nik','$nama','$no_kk','$tempat_lahir','$tgl_lahir',
 '$jenis_kelamin','$agama','$pend','$pekerjaan',
+'$alamat','$nama_ayah', '$nama_ibu',
 '$rt','$rw','$desa','$kecamatan','$kota',
 '$status','$wn'
 )

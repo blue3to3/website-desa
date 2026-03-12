@@ -183,6 +183,13 @@ include('../../config/koneksi.php');
                                         </div>
                                     </div>
                                     <!-- </div> -->
+                                     <div class="form-group">
+                                        <label class="col-sm-4 control-label">Alamat</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="falamat" class="form-control"
+                                                style="text-transform: capitalize;" placeholder="Alamat" required>
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label class="col-sm-4 control-label">RT</label>
                                         <div class="col-sm-8">
@@ -275,6 +282,20 @@ include('../../config/koneksi.php');
                                                 <option value="Ibu">Ibu</option>
                                                 <option value="Anak">Anak</option>
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Nama Ayah</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="fnama_aayah" class="form-control"
+                                                style="text-transform: capitalize;" placeholder="Nama Ayah" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-4 control-label">Nama Ibu</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="fnama_ibu" class="form-control"
+                                                style="text-transform: capitalize;" placeholder="Nama Ibu" required>
                                         </div>
                                     </div>
                                     <div class="form-group">

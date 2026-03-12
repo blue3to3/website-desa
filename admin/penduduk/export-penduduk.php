@@ -1,7 +1,7 @@
 <?php
 include('../../config/koneksi.php');
 
-$filename = "Data_Penduduk_Klapasawit_" . date('d-m-Y') . ".xls";
+$filename = "Data_Penduduk_Nusajati_" . date('d-m-Y') . ".xls";
 
 // Header agar browser mengenali ini sebagai Excel
 header("Content-Type: application/vnd.ms-excel");
@@ -30,6 +30,7 @@ header("Expires: 0");
             <th bgcolor="#D3D3D3">Agama</th>
             <th bgcolor="#D3D3D3">Pendidikan</th>
             <th bgcolor="#D3D3D3">Pekerjaan</th>
+            <th bgcolor="#D3D3D3">Alamat</th>
             <th bgcolor="#D3D3D3">RT</th>
             <th bgcolor="#D3D3D3">RW</th>
             <th bgcolor="#D3D3D3">Desa</th>
@@ -37,6 +38,8 @@ header("Expires: 0");
             <th bgcolor="#D3D3D3">Kota</th>
             <th bgcolor="#D3D3D3">Status</th>
             <th bgcolor="#D3D3D3">Kewarganegaraan</th>
+            <th bgcolor="#D3D3D3">Nama Ayah</th>
+            <th bgcolor="#D3D3D3">Nama Ibu</th>
         </tr>
     </thead>
     <tbody>
@@ -57,6 +60,7 @@ header("Expires: 0");
             <td><?php echo $row['agama']; ?></td>
             <td><?php echo $row['pend_terakhir']; ?></td>
             <td><?php echo $row['pekerjaan']; ?></td>
+            <td><?php echo $row['alamat']; ?></td>
             <td><?php echo $row['rt']; ?></td>
             <td><?php echo $row['rw']; ?></td>
             <td><?php echo $row['desa']; ?></td>
@@ -64,6 +68,8 @@ header("Expires: 0");
             <td><?php echo $row['kota']; ?></td>
             <td><?php echo $row['status_perkawinan']; ?></td>
             <td><?php echo $row['kewarganegaraan']; ?></td>
+            <td><?php echo $row['nama_ayah']; ?></td>
+            <td><?php echo $row['nama_ibu']; ?></td>
         </tr>
         <?php } ?>
     </tbody>

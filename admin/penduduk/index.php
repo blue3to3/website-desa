@@ -114,6 +114,8 @@ include('../part/header.php');
                                         <th><strong>Alamat</strong></th>
                                         <th><strong>Status</strong></th>
                                         <th><strong>Kewarganegaraan</strong></th>
+                                        <th><strong>Nama Ayah</strong></th>
+                                        <th><strong>Nama Ibu</strong></th>
                                         <?php
                                         if (isset($_SESSION['lvl']) && ($_SESSION['lvl'] == 'Administrator')) {
                                         ?>
@@ -167,11 +169,15 @@ include('../part/header.php');
                                         </td>
                                         <td style="text-transform: capitalize;"><?php echo $row['pekerjaan']; ?></td>
                                         <td style="text-transform: capitalize;">
-                                            <?php echo 'RT.', $row['rt'], '/RW.', $row['rw'], ' Desa ', $row['desa'], ' Kec. ', $row['kecamatan'], ' Kab. ', $row['kota']; ?>
+                                            <?php echo $row['alamat'], ' RT.', $row['rt'], '/RW.', $row['rw'], ' Desa ', $row['desa'], ' Kec. ', $row['kecamatan'], ' Kab. ', $row['kota']; ?>
                                         </td>
                                         <td style="text-transform: capitalize;"><?php echo $row['status_perkawinan']; ?>
                                         </td>
                                         <td style="text-transform: capitalize;"><?php echo $row['kewarganegaraan']; ?>
+                                        </td>
+                                         <td style="text-transform: capitalize;"><?php echo $row['nama_ayah']; ?>
+                                        </td>
+                                         <td style="text-transform: capitalize;"><?php echo $row['nama_ibu']; ?>
                                         </td>
                                         <?php
                                             if (isset($_SESSION['lvl']) && ($_SESSION['lvl'] == 'Administrator')) {

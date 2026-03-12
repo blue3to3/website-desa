@@ -115,11 +115,7 @@ $rowss = $pejabatDesa; // biar tidak ubah isi surat
             </div>
 
             <div style="font-size:13px;">
-                <?= $rows['alamat']; ?> Telp. <?= $rows['telepon']; ?>
-            </div>
-
-            <div style="font-size:13px;">
-                Email: <?= $rows['email']; ?> Kode Pos <?= $rows['kode_pos']; ?>
+                JL PROTOKOL RT 002 RW 05 NO 41
             </div>
         </div>
         <div align="center"><u>
